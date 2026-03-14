@@ -57,7 +57,7 @@ export default function Projects() {
               </motion.li>
             ))}
           </ul>
-          <div className="mt-8 flex gap-4">
+          {/* <div className="mt-8 flex gap-4">
             <motion.a
               href="#"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300 font-medium hover:bg-indigo-200 dark:hover:bg-indigo-500/30 transition-colors"
@@ -74,7 +74,7 @@ export default function Projects() {
             >
               Live
             </motion.a>
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </section>

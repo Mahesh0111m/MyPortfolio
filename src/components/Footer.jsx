@@ -1,10 +1,7 @@
 export default function Footer() {
   return (
     <footer className="py-10 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/30">
-      <div className="max-w-6xl mx-auto flex  sm:flex-row items-center  gap-4">
-        <p className="text-gray-600 dark:text-gray-400 text-sm order-1 sm:order-2">
-          © 2026. All rights reserved.
-        </p>
+      <div className="max-w-6xl mx-auto flex  sm:flex-row items-center justify-center gap-4">
         <a
           href="https://github.com/Mahesh0111m"
           target="_blank"
@@ -23,6 +20,11 @@ export default function Footer() {
           LinkedIn
         </a>
       </div>
+      <div className="max-w-6xl mx-auto flex  sm:flex-row items-center justify-center gap-4">
+      <p className="text-gray-600 dark:text-gray-400 text-sm order-1 sm:order-2 mt-2">
+        © 2026. All rights reserved.
+        </p>
+        </div>
     </footer>
   );
 }
