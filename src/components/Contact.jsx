@@ -96,7 +96,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   disabled={status === 'loading'}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-accent-500 focus:border-transparent outline-none transition disabled:opacity-60"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition disabled:opacity-60"
                   placeholder="Your name"
                 />
               </div>
@@ -112,7 +112,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   disabled={status === 'loading'}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-accent-500 focus:border-transparent outline-none transition disabled:opacity-60"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition disabled:opacity-60"
                   placeholder="your@email.com"
                 />
               </div>
@@ -127,7 +127,7 @@ export default function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                   disabled={status === 'loading'}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-accent-500 focus:border-transparent outline-none transition disabled:opacity-60"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition disabled:opacity-60"
                   placeholder="Subject"
                 />
               </div>
@@ -143,14 +143,14 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   disabled={status === 'loading'}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-accent-500 focus:border-transparent outline-none transition resize-y disabled:opacity-60"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition resize-y disabled:opacity-60"
                   placeholder="Your message"
                 />
               </div>
               <motion.button
                 type="submit"
                 disabled={status === 'loading'}
-                className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-accent-600 hover:bg-accent-700 text-white font-semibold shadow-soft hover:shadow-lg transition-all disabled:opacity-60 disabled:cursor-not-allowed"
+                className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-400 text-white font-semibold shadow-soft hover:shadow-lg transition-all disabled:opacity-60 disabled:cursor-not-allowed"
                 whileHover={status !== 'loading' ? { scale: 1.02 } : {}}
                 whileTap={status !== 'loading' ? { scale: 0.98 } : {}}
               >

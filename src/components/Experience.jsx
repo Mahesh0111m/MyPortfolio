@@ -1,11 +1,27 @@
 import { motion } from 'framer-motion'
 
-const bullets = [
-  'Developed and maintained RESTful APIs using Spring Boot following layered architecture principles.',
-  'Implemented business logic and database interactions using Spring Data JPA and MySQL.',
-  'Integrated backend APIs with frontend applications and ensured smooth end-to-end functionality.',
-  'Improved API performance by optimizing SQL queries and adding pagination for large data sets.',
-  'Implemented basic JWT-based authentication and authorization using Spring Security.',
+const experiences = [
+  {
+    role: 'Software Engineer',
+    duration: '1 year',
+    company: 'Sequro Technologies Pvt Ltd · Bangalore',
+    bullets: [
+      'Developed and maintained RESTful APIs using Spring Boot following layered architecture principles.',
+      'Implemented business logic and database interactions using Spring Data JPA and MySQL.',
+      'Integrated backend APIs with frontend applications and ensured smooth end-to-end functionality.',
+      'Improved API performance by optimizing SQL queries and adding pagination for large data sets.',
+      'Implemented basic JWT-based authentication and authorization using Spring Security.',
+    ],
+  },
+  {
+    role: 'Analyst',
+    duration: '7 months',
+    company: 'KPMG Global Services',
+    bullets: [
+      'Created and automated Excel reports to support business operations.',
+      'Handled data organization and reporting, strengthening attention to detail and analytical thinking.',
+    ],
+  },
 ]
 
 export default function Experience() {
@@ -26,41 +42,46 @@ export default function Experience() {
           viewport={{ once: true }}
           className="section-title-accent"
         />
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-50px' }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          whileHover={{ y: -2 }}
-          className="bg-white dark:bg-gray-800 rounded-2xl shadow-soft dark:shadow-soft-dark border border-gray-200 dark:border-gray-700 p-6 sm:p-8 hover:shadow-xl transition-shadow"
-        >
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-6">
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-              Software Engineer
-            </h3>
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-accent-500/10 text-accent-600 dark:text-accent-400">
-              1 year
-            </span>
-          </div>
-          <p className="text-gray-600 dark:text-gray-300 font-medium mb-4">
-            Sequro Technologies Pvt Ltd · Bangalore
-          </p>
-          <ul className="space-y-3">
-            {bullets.map((text, i) => (
-              <motion.li
-                key={i}
-                initial={{ opacity: 0, x: -10 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.05 * i }}
-                className="flex gap-3 text-gray-600 dark:text-gray-300"
-              >
-                <span className="text-accent-500 mt-1.5 flex-shrink-0">•</span>
-                <span>{text}</span>
-              </motion.li>
-            ))}
-          </ul>
-        </motion.div>
+        <div className="space-y-8">
+          {experiences.map((exp, idx) => (
+            <motion.div
+              key={exp.role + exp.company}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              whileHover={{ y: -2 }}
+              className="bg-white dark:bg-gray-800 rounded-2xl shadow-soft dark:shadow-soft-dark border border-gray-200 dark:border-gray-700 p-6 sm:p-8 hover:shadow-xl transition-shadow"
+            >
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-6">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                  {exp.role}
+                </h3>
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300">
+                  {exp.duration}
+                </span>
+              </div>
+              <p className="text-gray-600 dark:text-gray-300 font-medium mb-4">
+                {exp.company}
+              </p>
+              <ul className="space-y-3">
+                {exp.bullets.map((text, i) => (
+                  <motion.li
+                    key={i}
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.05 * i }}
+                    className="flex gap-3 text-gray-600 dark:text-gray-300"
+                  >
+                    <span className="text-indigo-500 mt-1.5 flex-shrink-0">•</span>
+                    <span>{text}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   )

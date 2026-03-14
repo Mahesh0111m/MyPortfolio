@@ -27,7 +27,7 @@ export default function Hero() {
           className="flex flex-col md:flex-row items-center gap-10 md:gap-14"
         >
           <motion.div variants={item} className="flex-shrink-0 order-2 md:order-1">
-            <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden ring-4 ring-accent-500/20 dark:ring-accent-500/30 shadow-soft dark:shadow-soft-dark bg-gray-200 dark:bg-gray-700">
+            <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden ring-4 ring-indigo-500/20 dark:ring-indigo-500/30 shadow-soft dark:shadow-soft-dark bg-gray-200 dark:bg-gray-700">
               <img
                 src="/profile-placeholder.svg"
                 alt="Mahesh"
@@ -42,7 +42,7 @@ export default function Hero() {
           <div className="flex-1 text-center md:text-left order-1 md:order-2">
             <motion.p
               variants={item}
-              className="text-accent-600 dark:text-accent-400 font-semibold text-sm uppercase tracking-wider mb-2"
+              className="text-indigo-600 dark:text-indigo-400 font-semibold text-sm uppercase tracking-wider mb-2"
             >
               Software Engineer
             </motion.p>
@@ -50,7 +50,7 @@ export default function Hero() {
               variants={item}
               className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-3 tracking-tight"
             >
-              Hi, I'm <span className="text-accent-600 dark:text-accent-400">Mahesh</span>
+              Hi, I'm <span className="text-indigo-600 dark:text-indigo-400">Mahesh</span>
             </motion.h1>
             <motion.p
               variants={item}
@@ -62,7 +62,7 @@ export default function Hero() {
             <motion.div variants={item}>
               <motion.a
                 href="#projects"
-                className="inline-block px-7 py-3.5 rounded-xl bg-accent-600 hover:bg-accent-700 text-white font-semibold shadow-soft hover:shadow-lg transition-all"
+                className="inline-block px-7 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-400 text-white font-semibold shadow-soft hover:shadow-lg transition-all"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
               >

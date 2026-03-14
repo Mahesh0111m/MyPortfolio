@@ -26,7 +26,7 @@ export default function Navbar() {
     >
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <a href="#hero" className="text-xl font-bold text-gray-900 dark:text-white hover:text-accent-600 dark:hover:text-accent-400 transition-colors">
+          <a href="#hero" className="text-xl font-bold text-gray-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
             Mahesh
           </a>
 
@@ -35,7 +35,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-gray-600 dark:text-gray-300 hover:text-accent-600 dark:hover:text-accent-400 font-medium transition-colors"
+                className="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition-colors"
               >
                 {link.label}
               </a>
@@ -48,7 +48,7 @@ export default function Navbar() {
             <motion.button
               type="button"
               onClick={() => setMobileOpen((o) => !o)}
-              className="p-2 rounded-xl text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+              className="p-2 rounded-xl text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
               whileTap={{ scale: 0.95 }}
               aria-label="Toggle menu"
             >
@@ -80,7 +80,7 @@ export default function Navbar() {
                     key={link.href}
                     href={link.href}
                     onClick={handleLinkClick}
-                    className="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-accent-500/10 dark:hover:bg-accent-500/20 hover:text-accent-600 dark:hover:text-accent-400 rounded-lg font-medium transition-colors"
+                    className="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-indigo-500/10 dark:hover:bg-indigo-500/20 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg font-medium transition-colors"
                   >
                     {link.label}
                   </a>

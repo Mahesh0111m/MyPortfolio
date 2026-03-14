@@ -5,12 +5,14 @@ const CDN = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons'
 const skills = [
   { name: 'Java', icon: `${CDN}/java/java-original.svg` },
   { name: 'Spring Boot', icon: `${CDN}/spring/spring-original.svg` },
-  { name: 'Microservices', icon: `${CDN}/docker/docker-original.svg` },
   { name: 'MySQL', icon: `${CDN}/mysql/mysql-original.svg` },
   { name: 'Git', icon: `${CDN}/git/git-original.svg` },
   { name: 'GitHub', icon: `${CDN}/github/github-original.svg` },
   { name: 'React', icon: `${CDN}/react/react-original.svg` },
   { name: 'AWS', icon: `${CDN}/amazonwebservices/amazonwebservices-original-wordmark.svg` },
+  { name: 'HTML', icon: `${CDN}/html5/html5-original.svg` },
+  { name: 'CSS', icon: `${CDN}/css3/css3-original.svg` },
+  { name: 'Python', icon: `${CDN}/python/python-original.svg` },
 ]
 
 const container = {
@@ -64,9 +66,9 @@ export default function Skills() {
               key={skill.name}
               variants={item}
               whileHover={{ y: -4 }}
-              className="group flex flex-col items-center gap-4 p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-soft dark:shadow-soft-dark hover:shadow-xl hover:border-accent-500/30 dark:hover:border-accent-500/40 transition-all duration-300"
+              className="group flex flex-col items-center gap-4 p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-soft dark:shadow-soft-dark hover:shadow-xl hover:border-indigo-500/30 dark:hover:border-indigo-500/40 transition-all duration-300"
             >
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gray-100 dark:bg-gray-700/80 group-hover:bg-accent-500/10 dark:group-hover:bg-accent-500/20 transition-colors relative">
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gray-100 dark:bg-gray-700/80 group-hover:bg-indigo-500/10 dark:group-hover:bg-indigo-500/20 transition-colors relative">
                 <img
                   src={skill.icon}
                   alt=""
@@ -78,7 +80,7 @@ export default function Skills() {
                     if (fallback) fallback.classList.remove('hidden')
                   }}
                 />
-                <span className="skill-fallback hidden text-lg font-bold text-accent-500">{skill.name.charAt(0)}</span>
+                <span className="skill-fallback hidden text-lg font-bold text-indigo-600 dark:text-indigo-400">{skill.name.charAt(0)}</span>
               </div>
               <span className="font-semibold text-gray-800 dark:text-gray-200 text-center text-sm sm:text-base">
                 {skill.name}

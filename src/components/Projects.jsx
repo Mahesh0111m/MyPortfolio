@@ -52,7 +52,7 @@ export default function Projects() {
                 transition={{ delay: 0.04 * i }}
                 className="flex gap-3 text-gray-600 dark:text-gray-300"
               >
-                <span className="text-accent-500 mt-1.5 flex-shrink-0">•</span>
+                <span className="text-indigo-500 mt-1.5 flex-shrink-0">•</span>
                 <span>{text}</span>
               </motion.li>
             ))}
@@ -60,7 +60,7 @@ export default function Projects() {
           <div className="mt-8 flex gap-4">
             <motion.a
               href="#"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-accent-500/10 text-accent-600 dark:text-accent-400 font-medium hover:bg-accent-500/20 transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300 font-medium hover:bg-indigo-200 dark:hover:bg-indigo-500/30 transition-colors"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -68,7 +68,7 @@ export default function Projects() {
             </motion.a>
             <motion.a
               href="#"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-medium hover:border-accent-500/50 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-medium hover:border-indigo-500/50 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >

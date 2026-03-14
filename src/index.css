@@ -16,6 +16,6 @@ body {
   }
   .section-title-accent {
     @apply block w-12 h-1 rounded-full mt-2 mb-8;
-    background-color: #6366f1;
+    background-color: #4f46e5; /* indigo-600 for visibility in both themes */
   }
 }
