@@ -31,6 +31,10 @@ npm run preview
 
 Place your photo at `public/profile-placeholder.svg` (or any image), or update the `src` in `src/components/Hero.jsx` to point to your image path (e.g. `public/mahesh.jpg` and use `src="/mahesh.jpg"`).
 
-## Contact form
+## Contact form (Formspree)
 
-The contact form shows a success message on submit. To send real emails, integrate [Formspree](https://formspree.io) or similar: set the form `action` to your Formspree endpoint and use `method="POST"`.
+The contact form submits to [Formspree](https://formspree.io). To use your own form:
+
+1. Create a form at formspree.io and copy the form ID.
+2. Create a `.env` file (see `.env.example`) and set `VITE_FORMSPREE_ID=your_form_id`.
+3. Restart the dev server. Messages will be sent to your Formspree email.

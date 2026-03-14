@@ -22,21 +22,20 @@ export default function Navbar() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.4 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800"
+      className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800 shadow-soft dark:shadow-soft-dark"
     >
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <a href="#hero" className="text-xl font-semibold text-gray-900 dark:text-white">
+          <a href="#hero" className="text-xl font-bold text-gray-900 dark:text-white hover:text-accent-600 dark:hover:text-accent-400 transition-colors">
             Mahesh
           </a>
 
-          {/* Desktop nav */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium transition-colors"
+                className="text-gray-600 dark:text-gray-300 hover:text-accent-600 dark:hover:text-accent-400 font-medium transition-colors"
               >
                 {link.label}
               </a>
@@ -44,13 +43,12 @@ export default function Navbar() {
             <ThemeToggle />
           </div>
 
-          {/* Mobile: menu button + theme */}
           <div className="flex items-center gap-2 lg:hidden">
             <ThemeToggle />
             <motion.button
               type="button"
               onClick={() => setMobileOpen((o) => !o)}
-              className="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+              className="p-2 rounded-xl text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
               whileTap={{ scale: 0.95 }}
               aria-label="Toggle menu"
             >
@@ -67,7 +65,6 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile menu */}
         <AnimatePresence>
           {mobileOpen && (
             <motion.div
@@ -77,13 +74,13 @@ export default function Navbar() {
               transition={{ duration: 0.2 }}
               className="lg:hidden overflow-hidden border-t border-gray-200 dark:border-gray-800"
             >
-              <div className="py-4 flex flex-col gap-2">
+              <div className="py-4 flex flex-col gap-1">
                 {navLinks.map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
                     onClick={handleLinkClick}
-                    className="block py-2 px-4 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium"
+                    className="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-accent-500/10 dark:hover:bg-accent-500/20 hover:text-accent-600 dark:hover:text-accent-400 rounded-lg font-medium transition-colors"
                   >
                     {link.label}
                   </a>

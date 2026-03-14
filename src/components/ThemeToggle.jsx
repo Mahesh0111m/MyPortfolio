@@ -8,7 +8,7 @@ export default function ThemeToggle() {
     <motion.button
       type="button"
       onClick={toggleTheme}
-      className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+      className="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-accent-500/10 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}

@@ -12,22 +12,29 @@ const bullets = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-10"
+          className="section-title"
         >
           Projects
         </motion.h2>
+        <motion.span
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="section-title-accent"
+        />
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.5 }}
-          className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 p-6 sm:p-8"
+          whileHover={{ y: -2 }}
+          className="bg-gray-50 dark:bg-gray-800 rounded-2xl shadow-soft dark:shadow-soft-dark border border-gray-200 dark:border-gray-700 p-6 sm:p-8 hover:shadow-xl transition-shadow"
         >
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
             Paying Guest Management System
@@ -45,24 +52,28 @@ export default function Projects() {
                 transition={{ delay: 0.04 * i }}
                 className="flex gap-3 text-gray-600 dark:text-gray-300"
               >
-                <span className="text-gray-400 dark:text-gray-500 mt-1.5">•</span>
+                <span className="text-accent-500 mt-1.5 flex-shrink-0">•</span>
                 <span>{text}</span>
               </motion.li>
             ))}
           </ul>
-          <div className="mt-6 flex gap-4">
-            <a
+          <div className="mt-8 flex gap-4">
+            <motion.a
               href="#"
-              className="text-gray-900 dark:text-white font-medium underline hover:no-underline"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-accent-500/10 text-accent-600 dark:text-accent-400 font-medium hover:bg-accent-500/20 transition-colors"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
               Source
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href="#"
-              className="text-gray-900 dark:text-white font-medium underline hover:no-underline"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-medium hover:border-accent-500/50 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
               Live
-            </a>
+            </motion.a>
           </div>
         </motion.div>
       </div>
