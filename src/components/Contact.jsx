@@ -29,7 +29,7 @@ export default function Contact() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-50px' }}
+          viewport={{ once: true, margin: "-50px" }}
           className="max-w-xl"
         >
           {submitted ? (
@@ -38,12 +38,22 @@ export default function Contact() {
               animate={{ opacity: 1, scale: 1 }}
               className="p-6 rounded-2xl bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 border border-green-200 dark:border-green-800"
             >
-              <p className="font-medium">Thanks! Your message has been sent. I'll get back to you soon.</p>
+              <p className="font-medium">
+                Thanks! Your message has been sent. I'll get back to you soon.
+              </p>
             </motion.div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form
+                action="https://formspree.io/f/xreylydv"
+                method='POST'
+              onSubmit={handleSubmit}
+              className="space-y-5"
+            >
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                >
                   Name *
                 </label>
                 <input
@@ -58,7 +68,10 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                >
                   Email *
                 </label>
                 <input
@@ -73,7 +86,10 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                <label
+                  htmlFor="subject"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                >
                   Subject
                 </label>
                 <input
@@ -87,7 +103,10 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                >
                   Message *
                 </label>
                 <textarea
@@ -114,5 +133,5 @@ export default function Contact() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
