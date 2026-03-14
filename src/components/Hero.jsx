@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import image from '../assets/photo.jpg'
 
 const container = {
   hidden: { opacity: 0 },
@@ -29,7 +30,7 @@ export default function Hero() {
           <motion.div variants={item} className="flex-shrink-0 order-2 md:order-1">
             <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden ring-4 ring-indigo-500/20 dark:ring-indigo-500/30 shadow-soft dark:shadow-soft-dark bg-gray-200 dark:bg-gray-700">
               <img
-                src="../../public/photo.jpg"
+                src={image}
                 alt="Mahesh"
                 className="w-full h-full object-cover"
                 onError={(e) => {
